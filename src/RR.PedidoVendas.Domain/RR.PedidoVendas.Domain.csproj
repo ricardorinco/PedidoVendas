@@ -57,10 +57,12 @@
     <Compile Include="Services\PedidoService.cs" />
     <Compile Include="Services\ProdutoService.cs" />
     <Compile Include="Specification\Clientes\ClienteCPFValidoSpecification.cs" />
-    <Compile Include="Specification\Clientes\ClienteNomeValidoSpecification.cs" />
-    <Compile Include="Specification\Produtos\ProdutoDescricaoValidaSpecification.cs" />
+    <Compile Include="Specification\Clientes\ClienteNomeMaiorQueValidoSpecification.cs" />
+    <Compile Include="Specification\Clientes\ClienteNomeMenorQueValidoSpecification.cs" />
+    <Compile Include="Specification\Produtos\ProdutoDescricaoMaiorQueValidaSpecification.cs" />
     <Compile Include="Specification\Produtos\ProdutoValorValidoSpecification.cs" />
-    <Compile Include="Validation\Bases\TextoValidation.cs" />
+    <Compile Include="Validation\Bases\TextoMaiorQueValidation.cs" />
+    <Compile Include="Validation\Bases\TextoMenorQueValidation.cs" />
     <Compile Include="Validation\Bases\ValorValidation.cs" />
     <Compile Include="Validation\Clientes\ClienteConsistenteValidation.cs" />
     <Compile Include="Validation\Pedidos\DataEntregaMaiorIgualAtualValidation.cs" />

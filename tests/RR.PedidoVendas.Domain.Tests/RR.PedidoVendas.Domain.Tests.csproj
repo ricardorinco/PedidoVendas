@@ -53,7 +53,7 @@
     <Compile Include="Validation\Produtos\ProdutoValidationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Specification\Clientes\ClienteCPFSpecificationTests.cs" />
-    <Compile Include="Specification\Clientes\ClienteNomeSpecificiationTests.cs" />
+    <Compile Include="Specification\Clientes\ClienteNomeMaiorQueSpecificationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

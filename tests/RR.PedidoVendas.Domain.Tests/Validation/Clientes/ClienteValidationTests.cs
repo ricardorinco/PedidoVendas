@@ -32,6 +32,7 @@ namespace RR.PedidoVendas.Domain.Tests.Validation.Clientes
 
             Assert.IsFalse(cliente.IsValid());
             Assert.IsTrue(cliente.ValidationResult.Erros.Any(c => c.Message == "O nome do cliente deve conter no mínimo 3 caracteres."));
+            Assert.IsFalse(cliente.ValidationResult.Erros.Any(c => c.Message == "O nome do cliente deve conter no máximo 180 caracteres."));
             Assert.IsTrue(cliente.ValidationResult.Erros.Any(c => c.Message == "Informe um CPF válido."));
         }
     }

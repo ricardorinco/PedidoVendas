@@ -1,12 +1,12 @@
 ﻿namespace RR.PedidoVendas.Domain.Validation.Bases
 {
-    public class TextoValidation
+    public class TextoMenorQueValidation
     {
-        public static bool Validar(string texto)
+        public static bool Validar(string texto, int tamanho)
         {
             try
             {
-                return texto.Length > 2;
+                return texto.Length < tamanho;
             }
             catch
             {

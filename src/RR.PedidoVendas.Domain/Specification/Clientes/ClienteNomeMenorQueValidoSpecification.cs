@@ -4,11 +4,11 @@ using RR.PedidoVendas.Domain.Validation.Bases;
 
 namespace RR.PedidoVendas.Domain.Specification.Clientes
 {
-    public class ClienteNomeValidoSpecification : ISpecification<Cliente>
+    public class ClienteNomeMenorQueValidoSpecification : ISpecification<Cliente>
     {
         public bool IsSatisfiedBy(Cliente cliente)
         {
-            return TextoValidation.Validar(cliente.Nome);
+            return TextoMenorQueValidation.Validar(cliente.Nome, 181);
         }
     }
 }

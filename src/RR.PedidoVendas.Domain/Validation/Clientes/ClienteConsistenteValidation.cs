@@ -8,10 +8,12 @@ namespace RR.PedidoVendas.Domain.Validation.Clientes
     {
         public ClienteConsistenteValidation()
         {
-            var clienteNomeValido = new ClienteNomeValidoSpecification();
+            var clienteNomeMaiorQueValido = new ClienteNomeMaiorQueValidoSpecification();
+            var clienteNomeMenorQueValido = new ClienteNomeMenorQueValidoSpecification();
             var clienteCPFValido = new ClienteCPFValidoSpecification();
 
-            Add("clienteNomeValido", new Rule<Cliente>(clienteNomeValido, "O nome do cliente deve conter no mínimo 3 caracteres."));
+            Add("clienteNomeMaiorQueValido", new Rule<Cliente>(clienteNomeMaiorQueValido, "O nome do cliente deve conter no mínimo 3 caracteres."));
+            Add("clienteNomeMenorQueValido", new Rule<Cliente>(clienteNomeMenorQueValido, "O nome do cliente deve conter no máximo 180 caracteres."));
             Add("clienteCPFValido", new Rule<Cliente>(clienteCPFValido, "Informe um CPF válido."));
         }
     }

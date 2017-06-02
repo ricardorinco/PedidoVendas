@@ -8,10 +8,10 @@ namespace RR.PedidoVendas.Domain.Validation.Produtos
     {
         public ProdutoConsistenteValidation()
         {
-            var produtoDescricaoValida = new ProdutoDescricaoValidaSpecification();
+            var produtoDescricaoMaiorQueValida = new ProdutoDescricaoMaiorQueValidaSpecification();
             var produtoValorValido = new ProdutoValorValidoSpecification();
 
-            Add("produtoDescricaoValida", new Rule<Produto>(produtoDescricaoValida, "A descrição do produto deve conter no mínimo 3 caracteres."));
+            Add("produtoDescricaoMaiorQueValida", new Rule<Produto>(produtoDescricaoMaiorQueValida, "A descrição do produto deve conter no mínimo 3 caracteres."));
             Add("produtoValorValido", new Rule<Produto>(produtoValorValido, "O valor do produto não deve ser negativo."));
         }
     }

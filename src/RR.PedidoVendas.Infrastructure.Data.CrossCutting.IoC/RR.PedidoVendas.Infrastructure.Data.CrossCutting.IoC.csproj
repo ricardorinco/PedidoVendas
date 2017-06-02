@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleInjector, Version=3.3.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SimpleInjector.3.3.2\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BootStrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RR.PedidoVendas.Domain\RR.PedidoVendas.Domain.csproj">
+      <Project>{DB52EDAA-0642-4D21-9366-B90C5BA17255}</Project>
+      <Name>RR.PedidoVendas.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RR.PedidoVendas.Infrastructure.Data\RR.PedidoVendas.Infrastructure.Data.csproj">
+      <Project>{003B5355-1C4C-4BD4-8504-B5E11EB30E59}</Project>
+      <Name>RR.PedidoVendas.Infrastructure.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
