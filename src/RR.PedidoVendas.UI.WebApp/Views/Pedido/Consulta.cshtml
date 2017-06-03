@@ -1,0 +1,77 @@
+﻿@model IEnumerable<RR.PedidoVendas.Application.ViewModels.PedidoViewModel>
+
+@{
+    ViewBag.Title = "Consulta de Pedido de Vendas";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="row centered-form">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    @Html.Label("Cliente", htmlAttributes: new { @class = "control-label" })
+                                    @*@Html.DropDownList("ClienteId", null, string.Empty, htmlAttributes: new { @class = "form-control" })*@
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    @Html.Label("Controle", htmlAttributes: new { @class = "control-label" })
+                                    @Html.TextBox("Controle", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    @Html.Label("Inicial", htmlAttributes: new { @class = "control-label" })
+                                    <input class="form-control text-box single-line" data-val="true" data-val-date="The field Data de Entrega must be a date." data-val-required="Preencha o campo data de entrega inicial." id="DataEntregaInicial" name="DataEntregaInicial" type="date" value="">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    @Html.Label("Final", htmlAttributes: new { @class = "control-label" })
+                                    <input class="form-control text-box single-line" data-val="true" data-val-date="The field Data de Entrega must be a date." data-val-required="Preencha o campo data de entrega final." id="DataEntregaFinal" name="DataEntregaFinal" type="date" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Pesquisar" class="btn btn-info btn-block" onsubmit="return checarDatas()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>@ViewBag.Title</strong>
+    </div>
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.NumeroControle)</th>
+            <th>@Html.DisplayNameFor(model => model.Cliente.Nome)</th>
+            <th>Total do Pedido</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            decimal totalPedido = 0.0m;
+            if (item.Itens != null)
+            {
+                totalPedido = item.Itens.Sum(i => (i.Produto.Valor * i.Quantidade));
+            }
+            string totalPedidoFormatado = string.Format("{0:C}", totalPedido);
+
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.NumeroControle)</td>
+                <td>@Html.DisplayFor(modelItem => item.Cliente.Nome)</td>
+                <td>@Html.DisplayFor(modelItem => totalPedidoFormatado)</td>
+            </tr>
+        }
+    </table>
+</div>

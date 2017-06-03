@@ -1,5 +1,7 @@
 ﻿# Pedido de Vendas
 
+Esta é uma simples aplicação de Pedido de Vendas utilizando como base algumas das ferramentas e metodologias mais utilizadas atualmente.
+
 #### Technology
 
  - ASP.NET MVC 5

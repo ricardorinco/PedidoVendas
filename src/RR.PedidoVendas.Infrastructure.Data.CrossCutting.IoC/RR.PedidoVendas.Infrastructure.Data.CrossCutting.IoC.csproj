@@ -50,6 +50,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RR.PedidoVendas.Application\RR.PedidoVendas.Application.csproj">
+      <Project>{7BD96949-AEEF-436E-B28C-11D2A35970E5}</Project>
+      <Name>RR.PedidoVendas.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RR.PedidoVendas.Domain\RR.PedidoVendas.Domain.csproj">
       <Project>{DB52EDAA-0642-4D21-9366-B90C5BA17255}</Project>
       <Name>RR.PedidoVendas.Domain</Name>

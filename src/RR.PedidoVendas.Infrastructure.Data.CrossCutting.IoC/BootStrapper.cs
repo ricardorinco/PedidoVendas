@@ -1,4 +1,6 @@
-﻿using RR.PedidoVendas.Domain.Interfaces.Repository;
+﻿using RR.PedidoVendas.Application.Interfaces;
+using RR.PedidoVendas.Application.Services;
+using RR.PedidoVendas.Domain.Interfaces.Repository;
 using RR.PedidoVendas.Domain.Interfaces.Services;
 using RR.PedidoVendas.Domain.Services;
 using RR.PedidoVendas.Infrastructure.Data.Context;
@@ -13,6 +15,11 @@ namespace RR.PedidoVendas.Infrastructure.Data.CrossCutting.IoC
     {
         public static void Register(Container container)
         {
+            container.Register<IClienteAppService, ClienteAppService>(Lifestyle.Scoped);
+            container.Register<IItemAppService, ItemAppService>(Lifestyle.Scoped);
+            container.Register<IPedidoAppService, PedidoAppService>(Lifestyle.Scoped);
+            container.Register<IProdutoAppService, ProdutoAppService>(Lifestyle.Scoped);
+
             container.Register<IClienteService, ClienteService>(Lifestyle.Scoped);
             container.Register<IItemService, ItemService>(Lifestyle.Scoped);
             container.Register<IPedidoService, PedidoService>(Lifestyle.Scoped);

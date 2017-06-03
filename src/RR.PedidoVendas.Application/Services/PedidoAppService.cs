@@ -59,6 +59,11 @@ namespace RR.PedidoVendas.Application.Services
             return Mapper.Map<IEnumerable<PedidoViewModel>>(pedidoService.SelecionarTodos());
         }
 
+        public int ProximoNumeroControle()
+        {
+            return pedidoService.ProximoNumeroControle();
+        }
+
         public void Dispose()
         {
             pedidoService.Dispose();

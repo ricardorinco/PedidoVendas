@@ -15,7 +15,7 @@ namespace RR.PedidoVendas.Infrastructure.Data.EntitiesConfiguration
 
             Property(c => c.CPF)
                 .IsRequired()
-                .HasMaxLength(11)
+                .HasMaxLength(14)
                 .IsFixedLength();
 
             Ignore(c => c.ValidationResult);

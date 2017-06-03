@@ -61,10 +61,12 @@
     <Compile Include="Specification\Clientes\ClienteNomeMaiorQueValidoSpecification.cs" />
     <Compile Include="Specification\Clientes\ClienteNomeMenorQueValidoSpecification.cs" />
     <Compile Include="Specification\Produtos\ProdutoDescricaoMaiorQueValidaSpecification.cs" />
-    <Compile Include="Specification\Produtos\ProdutoValorValidoSpecification.cs" />
+    <Compile Include="Specification\Produtos\ProdutoValorMenorQueValidoSpecification.cs" />
+    <Compile Include="Specification\Produtos\ProdutoValorMaiorQueValidoSpecification.cs" />
     <Compile Include="Validation\Bases\TextoMaiorQueValidation.cs" />
     <Compile Include="Validation\Bases\TextoMenorQueValidation.cs" />
-    <Compile Include="Validation\Bases\ValorValidation.cs" />
+    <Compile Include="Validation\Bases\ValorMenorQueValidation.cs" />
+    <Compile Include="Validation\Bases\ValorMaiorQueValidation.cs" />
     <Compile Include="Validation\Clientes\ClienteConsistenteValidation.cs" />
     <Compile Include="Validation\Pedidos\DataEntregaMaiorIgualAtualValidation.cs" />
     <Compile Include="Validation\Produtos\ProdutoConsistenteValidation.cs" />

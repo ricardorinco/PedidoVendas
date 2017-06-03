@@ -4,11 +4,11 @@ using RR.PedidoVendas.Domain.Validation.Bases;
 
 namespace RR.PedidoVendas.Domain.Specification.Produtos
 {
-    public class ProdutoValorValidoSpecification : ISpecification<Produto>
+    public class ProdutoValorMaiorQueValidoSpecification : ISpecification<Produto>
     {
         public bool IsSatisfiedBy(Produto produto)
         {
-            return ValorValidation.Validar(produto.Valor);
+            return ValorMaiorQueValidation.Validar(produto.Valor, 0.00m);
         }
     }
 }

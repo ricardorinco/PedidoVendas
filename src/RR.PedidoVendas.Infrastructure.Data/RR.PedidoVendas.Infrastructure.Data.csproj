@@ -56,6 +56,7 @@
     <Compile Include="EntitiesConfiguration\PedidoConfiguration.cs" />
     <Compile Include="EntitiesConfiguration\ProdutoConfiguration.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\ItemRepository.cs" />
@@ -68,9 +69,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\RR.PedidoVendas.Domain\RR.PedidoVendas.Domain.csproj">
       <Project>{DB52EDAA-0642-4D21-9366-B90C5BA17255}</Project>

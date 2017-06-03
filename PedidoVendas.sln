@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RR.PedidoVendas.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RR.PedidoVendas.Application", "src\RR.PedidoVendas.Application\RR.PedidoVendas.Application.csproj", "{7BD96949-AEEF-436E-B28C-11D2A35970E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RR.PedidoVendas.UI.WebApp", "src\RR.PedidoVendas.UI.WebApp\RR.PedidoVendas.UI.WebApp.csproj", "{9A313304-28E3-49A6-A8A4-85015B0ACAAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{7BD96949-AEEF-436E-B28C-11D2A35970E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BD96949-AEEF-436E-B28C-11D2A35970E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BD96949-AEEF-436E-B28C-11D2A35970E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A313304-28E3-49A6-A8A4-85015B0ACAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A313304-28E3-49A6-A8A4-85015B0ACAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A313304-28E3-49A6-A8A4-85015B0ACAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A313304-28E3-49A6-A8A4-85015B0ACAAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +76,6 @@ Global
 		{003B5355-1C4C-4BD4-8504-B5E11EB30E59} = {80461E0D-2AC4-4D58-8832-5898ABD7207E}
 		{5F61FB4B-5F66-4833-B934-ABE3C181B7A6} = {9170F397-9984-4B97-9AB7-08CE4F8BD833}
 		{7BD96949-AEEF-436E-B28C-11D2A35970E5} = {9144E3A2-DFA1-4147-8EC9-91BF34DED91A}
+		{9A313304-28E3-49A6-A8A4-85015B0ACAAA} = {B181333E-0BCD-4DA0-8DD5-156D94E8F53A}
 	EndGlobalSection
 EndGlobal

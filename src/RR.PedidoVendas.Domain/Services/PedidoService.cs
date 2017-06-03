@@ -47,6 +47,11 @@ namespace RR.PedidoVendas.Domain.Services
             return pedidoRepository.SelecionarTodos();
         }
 
+        public int ProximoNumeroControle()
+        {
+            return pedidoRepository.ProximoNumeroControle();
+        }
+
         public void Dispose()
         {
             pedidoRepository.Dispose();
