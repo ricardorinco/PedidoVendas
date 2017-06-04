@@ -1,6 +1,7 @@
 ﻿using RR.PedidoVendas.Domain.Interfaces.Repository;
 using RR.PedidoVendas.Domain.Interfaces.Services;
 using RR.PedidoVendas.Domain.Models;
+using RR.PedidoVendas.Domain.Validation.Itens;
 using System.Collections.Generic;
 
 namespace RR.PedidoVendas.Domain.Services
@@ -19,9 +20,9 @@ namespace RR.PedidoVendas.Domain.Services
             if (!item.IsValid())
                 return item;
 
-            // item.ValidationResult = new ItemConsistenteValidation().Validate(item);
+            item.ValidationResult = new ItemConsistenteValidation().Validate(item);
 
-            if (item.ValidationResult.IsValid)
+            if (!item.ValidationResult.IsValid)
                 return item;
 
             return itemRepository.Adicionar(item);
@@ -42,9 +43,17 @@ namespace RR.PedidoVendas.Domain.Services
         {
             return itemRepository.SelecionarPorId(id);
         }
+        public bool SelecionarProdutoPorPedido(int produtoId, int pedidoId)
+        {
+            return itemRepository.SelecionarProdutoPorPedido(produtoId, pedidoId);
+        }
         public IEnumerable<Item> SelecionarTodos()
         {
             return itemRepository.SelecionarTodos();
+        }
+        public IEnumerable<Item> SelecionarPorPedidoId(int pedidoId)
+        {
+            return itemRepository.SelecionarPorPedidoId(pedidoId);
         }
 
         public void Dispose()

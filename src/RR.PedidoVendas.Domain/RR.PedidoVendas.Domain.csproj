@@ -68,13 +68,13 @@
     <Compile Include="Validation\Bases\ValorMenorQueValidation.cs" />
     <Compile Include="Validation\Bases\ValorMaiorQueValidation.cs" />
     <Compile Include="Validation\Clientes\ClienteConsistenteValidation.cs" />
-    <Compile Include="Validation\Pedidos\DataEntregaMaiorIgualAtualValidation.cs" />
+    <Compile Include="Specification\Pedidos\PedidoDataEntregaMaiorIgualAtualSpecification.cs" />
+    <Compile Include="Validation\Itens\ItemConsistenteValidation.cs" />
+    <Compile Include="Validation\Pedidos\PedidoConsistenteValidation.cs" />
     <Compile Include="Validation\Produtos\ProdutoConsistenteValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Specification\Itens\" />
-    <Folder Include="Specification\Pedidos\" />
-    <Folder Include="Validation\Itens\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

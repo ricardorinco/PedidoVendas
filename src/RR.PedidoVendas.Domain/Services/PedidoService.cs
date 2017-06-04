@@ -1,6 +1,7 @@
 ﻿using RR.PedidoVendas.Domain.Interfaces.Repository;
 using RR.PedidoVendas.Domain.Interfaces.Services;
 using RR.PedidoVendas.Domain.Models;
+using RR.PedidoVendas.Domain.Validation.Pedidos;
 using System.Collections.Generic;
 
 namespace RR.PedidoVendas.Domain.Services
@@ -19,7 +20,7 @@ namespace RR.PedidoVendas.Domain.Services
             if (!pedido.IsValid())
                 return pedido;
 
-            // pedido.ValidationResult = new PedidoConsistenteValidation().Validate(pedido);
+            pedido.ValidationResult = new PedidoConsistenteValidation().Validate(pedido);
 
             if (!pedido.ValidationResult.IsValid)
                 return pedido;

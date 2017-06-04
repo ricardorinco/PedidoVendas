@@ -1,4 +1,5 @@
 ﻿using DomainValidation.Validation;
+using RR.PedidoVendas.Domain.Validation.Pedidos;
 using System;
 using System.Collections.Generic;
 
@@ -18,7 +19,9 @@ namespace RR.PedidoVendas.Domain.Models
 
         public bool IsValid()
         {
-            return true;
+            ValidationResult = new PedidoConsistenteValidation().Validate(this);
+
+            return ValidationResult.IsValid;
         }
     }
 }

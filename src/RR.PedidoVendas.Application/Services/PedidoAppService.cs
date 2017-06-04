@@ -22,6 +22,7 @@ namespace RR.PedidoVendas.Application.Services
 
         public PedidoViewModel Adicionar(PedidoViewModel pedidoViewModel)
         {
+            pedidoViewModel.NumeroControle = pedidoService.ProximoNumeroControle();
             var pedido = Mapper.Map<Pedido>(pedidoViewModel);
             var pedidoRetornado = pedidoService.Adicionar(pedido);
 
@@ -57,11 +58,6 @@ namespace RR.PedidoVendas.Application.Services
         public IEnumerable<PedidoViewModel> SelecionarTodos()
         {
             return Mapper.Map<IEnumerable<PedidoViewModel>>(pedidoService.SelecionarTodos());
-        }
-
-        public int ProximoNumeroControle()
-        {
-            return pedidoService.ProximoNumeroControle();
         }
 
         public void Dispose()
