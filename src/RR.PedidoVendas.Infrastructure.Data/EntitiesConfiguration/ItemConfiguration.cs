@@ -11,7 +11,7 @@ namespace RR.PedidoVendas.Infrastructure.Data.EntitiesConfiguration
 
             Property(i => i.Quantidade)
                 .IsRequired()
-                .HasPrecision(3, 2);
+                .HasPrecision(5, 2);
 
             HasRequired(i => i.Produto)
                 .WithMany(p => p.Itens)

@@ -1,0 +1,29 @@
+﻿@model RR.PedidoVendas.Application.ViewModels.ProdutoViewModel
+
+<h2>@ViewBag.Titulo</h2>
+<hr />
+
+<div class="panel panel-default">
+    <div class="panel-heading">@Html.DisplayFor(model => model.Descricao)</div>
+    <br />
+    <div>
+        <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(model => model.ValidationResult)</dt>
+            <dd>
+                @{
+                    var valor = string.Format("{0:C}", Model.Valor);
+                    @Html.DisplayFor(model => valor)
+                }
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<div>
+    <a href="@Url.Action("Editar", "Produto", new { id = Model.Id })" class="btn btn-warning">
+        <span title="Editar Produto">Editar</span>
+    </a>
+    <a href="@Url.Action("Consultar", "Produto")" class="btn btn-default">
+        <span title="Consultar Produtos">Voltar</span>
+    </a>
+</div>

@@ -2,9 +2,9 @@
 {
     public class ValorMaiorQueValidation
     {
-        public static bool Validar(decimal price, decimal valor)
+        public static bool Validar(decimal preco, decimal valor)
         {
-            return price > valor;
+            return preco > valor;
         }
     }
 }

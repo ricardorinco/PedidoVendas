@@ -8,7 +8,7 @@ namespace RR.PedidoVendas.Domain.Specification.Produtos
     {
         public bool IsSatisfiedBy(Produto produto)
         {
-            return ValorMaiorQueValidation.Validar(produto.Valor, 0.00m);
+            return ValorMaiorQueValidation.Validar(produto.Valor, -1m);
         }
     }
 }

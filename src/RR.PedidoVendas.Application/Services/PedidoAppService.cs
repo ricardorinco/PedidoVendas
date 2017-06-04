@@ -55,9 +55,21 @@ namespace RR.PedidoVendas.Application.Services
         {
             return Mapper.Map<PedidoViewModel>(pedidoService.SelecionarPorId(id));
         }
+        public IEnumerable<PedidoViewModel> SelecionarPorNumeroControle(int numeroControle)
+        {
+            return Mapper.Map<IEnumerable<PedidoViewModel>>(pedidoService.SelecionarPorNumeroControle(numeroControle));
+        }
         public IEnumerable<PedidoViewModel> SelecionarTodos()
         {
             return Mapper.Map<IEnumerable<PedidoViewModel>>(pedidoService.SelecionarTodos());
+        }
+        public IEnumerable<PedidoViewModel> SelecionarPorClienteId(int clienteId)
+        {
+            return Mapper.Map<IEnumerable<PedidoViewModel>>(pedidoService.SelecionarPorClienteId(clienteId));
+        }
+        public IEnumerable<PedidoViewModel> SelecionarPorDataEntrega(DateTime dataEntregaInicial, DateTime dataEntregaFinal)
+        {
+            return Mapper.Map<IEnumerable<PedidoViewModel>>(pedidoService.SelecionarPorDataEntrega(dataEntregaInicial, dataEntregaFinal));
         }
 
         public void Dispose()

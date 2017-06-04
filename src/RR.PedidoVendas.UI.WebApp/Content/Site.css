@@ -22,3 +22,13 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(http://www.agendor.com.br/blog/wp-content/uploads/2014/11/processo-de-vendas.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0em 0em 0.13em;
+}

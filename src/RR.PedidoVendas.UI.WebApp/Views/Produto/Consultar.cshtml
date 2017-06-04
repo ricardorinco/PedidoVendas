@@ -1,0 +1,42 @@
+﻿@model IEnumerable<RR.PedidoVendas.Application.ViewModels.ProdutoViewModel>
+
+<a href="@Url.Action("Adicionar", "Produto")" class="btn btn-success">
+    <span title="Criar um Novo Produto">Novo Produto</span>
+</a>
+
+<hr />
+<div class="panel panel-default">
+    <div class="panel-heading">@ViewBag.Titulo</div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th style="text-align: center;">@Html.DisplayNameFor(model => model.Descricao)</th>
+                <th style="text-align: center;">@Html.DisplayNameFor(model => model.Valor)</th>
+                <th style="text-align: center;">Ações</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td align="left">@Html.DisplayFor(modelItem => item.Descricao)</td>
+                <td align="center">
+                    @{
+                        var valor = string.Format("{0:C}", item.Valor);
+                        @Html.DisplayFor(model => valor)
+                    }
+                </td>
+                <td align="center">
+                    <a href="@Url.Action("Editar", "Produto", new { id = item.Id })" class="btn btn-warning">
+                        <span title="Editar" class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="@Url.Action("Detalhes", "Produto", new {id = item.Id})" class="btn btn-info">
+                        <span title="Detalhes" class="glyphicon glyphicon-search"></span>
+                    </a>
+                    <a href="@Url.Action("Remover", "Produto", new {id = item.Id})" class="btn btn-danger">
+                        <span title="Excluir" class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

@@ -11,3 +11,4 @@ Esta é uma simples aplicação de Pedido de Vendas utilizando como base algumas
  - AutoMapper
  - Inversion of Control (IoC)
  - Dependency Injection (DI)
+ - RhinoMock

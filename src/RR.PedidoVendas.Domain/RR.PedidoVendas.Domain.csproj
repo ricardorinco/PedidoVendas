@@ -60,22 +60,24 @@
     <Compile Include="Specification\Clientes\ClienteCPFValidoSpecification.cs" />
     <Compile Include="Specification\Clientes\ClienteNomeMaiorQueValidoSpecification.cs" />
     <Compile Include="Specification\Clientes\ClienteNomeMenorQueValidoSpecification.cs" />
+    <Compile Include="Specification\Itens\ItemProdutoDeveSerUnicoSpecification.cs" />
+    <Compile Include="Specification\Itens\ItemQuantidadeMenorQueValidoSpecification.cs" />
+    <Compile Include="Specification\Itens\ItemQuantidadeMaiorQueValidoSpecification.cs" />
     <Compile Include="Specification\Produtos\ProdutoDescricaoMaiorQueValidaSpecification.cs" />
-    <Compile Include="Specification\Produtos\ProdutoValorMenorQueValidoSpecification.cs" />
     <Compile Include="Specification\Produtos\ProdutoValorMaiorQueValidoSpecification.cs" />
+    <Compile Include="Validation\Bases\QuantidadeMenorQueValidation.cs" />
+    <Compile Include="Validation\Bases\QuantidadeMaiorQueValidation.cs" />
     <Compile Include="Validation\Bases\TextoMaiorQueValidation.cs" />
     <Compile Include="Validation\Bases\TextoMenorQueValidation.cs" />
-    <Compile Include="Validation\Bases\ValorMenorQueValidation.cs" />
     <Compile Include="Validation\Bases\ValorMaiorQueValidation.cs" />
     <Compile Include="Validation\Clientes\ClienteConsistenteValidation.cs" />
     <Compile Include="Specification\Pedidos\PedidoDataEntregaMaiorIgualAtualSpecification.cs" />
+    <Compile Include="Validation\Itens\ItemAptoParaAdicionarValidation.cs" />
     <Compile Include="Validation\Itens\ItemConsistenteValidation.cs" />
     <Compile Include="Validation\Pedidos\PedidoConsistenteValidation.cs" />
     <Compile Include="Validation\Produtos\ProdutoConsistenteValidation.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Specification\Itens\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

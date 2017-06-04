@@ -32,8 +32,7 @@ namespace RR.PedidoVendas.Domain.Tests.Validation.Produtos
 
             Assert.IsFalse(produto.IsValid());
             Assert.IsTrue(produto.ValidationResult.Erros.Any(p => p.Message == "A descrição do produto deve conter no mínimo 3 caracteres."));
-            Assert.IsTrue(produto.ValidationResult.Erros.Any(p => p.Message == "O valor do produto deve ser maior que R$ 0.00."));
-            Assert.IsFalse(produto.ValidationResult.Erros.Any(p => p.Message == "O valor do produto deve ser menor que R$ 999.99."));
+            Assert.IsTrue(produto.ValidationResult.Erros.Any(p => p.Message == "O valor do produto deve ser maior que R$ -0.01."));
         }
     }
 }

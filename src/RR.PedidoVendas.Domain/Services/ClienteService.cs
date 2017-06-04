@@ -1,7 +1,6 @@
 ﻿using RR.PedidoVendas.Domain.Interfaces.Repository;
 using RR.PedidoVendas.Domain.Interfaces.Services;
 using RR.PedidoVendas.Domain.Models;
-using RR.PedidoVendas.Domain.Validation.Clientes;
 using System.Collections.Generic;
 
 namespace RR.PedidoVendas.Domain.Services
@@ -19,8 +18,6 @@ namespace RR.PedidoVendas.Domain.Services
         {
             if (!cliente.IsValid())
                 return cliente;
-
-            cliente.ValidationResult = new ClienteConsistenteValidation().Validate(cliente);
 
             if (!cliente.ValidationResult.IsValid)
                 return cliente;

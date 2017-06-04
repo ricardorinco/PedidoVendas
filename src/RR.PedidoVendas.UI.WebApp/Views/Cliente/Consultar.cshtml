@@ -1,0 +1,37 @@
+﻿@model IEnumerable<RR.PedidoVendas.Application.ViewModels.ClienteViewModel>
+
+<a href="@Url.Action("Adicionar", "Cliente")" class="btn btn-success">
+    <span title="Criar um Novo Cliente">Novo Cliente</span>
+</a>
+
+<hr />
+<div class="panel panel-default">
+    <div class="panel-heading">@ViewBag.Titulo</div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th style="text-align: center;">@Html.DisplayNameFor(model => model.Nome)</th>
+                <th style="text-align: center;">@Html.DisplayNameFor(model => model.CPF)</th>
+                <th style="text-align: center;">Ações</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td align="left">@Html.DisplayFor(modelItem => item.Nome)</td>
+                <td align="center">@Html.DisplayFor(modelItem => item.CPF)</td>
+                <td align="center">
+                    <a href="@Url.Action("Editar", "Cliente", new { id = item.Id })" class="btn btn-warning">
+                        <span title="Editar" class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="@Url.Action("Detalhes", "Cliente", new {id = item.Id})" class="btn btn-info">
+                        <span title="Detalhes" class="glyphicon glyphicon-search"></span>
+                    </a>
+                    <a href="@Url.Action("Remover", "Cliente", new {id = item.Id})" class="btn btn-danger">
+                        <span title="Excluir" class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

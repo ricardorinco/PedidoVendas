@@ -1,7 +1,7 @@
 ﻿using RR.PedidoVendas.Domain.Interfaces.Repository;
 using RR.PedidoVendas.Domain.Interfaces.Services;
 using RR.PedidoVendas.Domain.Models;
-using RR.PedidoVendas.Domain.Validation.Pedidos;
+using System;
 using System.Collections.Generic;
 
 namespace RR.PedidoVendas.Domain.Services
@@ -19,8 +19,6 @@ namespace RR.PedidoVendas.Domain.Services
         {
             if (!pedido.IsValid())
                 return pedido;
-
-            pedido.ValidationResult = new PedidoConsistenteValidation().Validate(pedido);
 
             if (!pedido.ValidationResult.IsValid)
                 return pedido;
@@ -43,9 +41,21 @@ namespace RR.PedidoVendas.Domain.Services
         {
             return pedidoRepository.SelecionarPorId(id);
         }
+        public IEnumerable<Pedido> SelecionarPorNumeroControle(int numeroControle)
+        {
+            return pedidoRepository.SelecionarPorNumeroControle(numeroControle);
+        }
         public IEnumerable<Pedido> SelecionarTodos()
         {
             return pedidoRepository.SelecionarTodos();
+        }
+        public IEnumerable<Pedido> SelecionarPorClienteId(int clienteId)
+        {
+            return pedidoRepository.SelecionarPorClienteId(clienteId);
+        }
+        public IEnumerable<Pedido> SelecionarPorDataEntrega(DateTime dataEntregaInicial, DateTime dataEntregaFinal)
+        {
+            return pedidoRepository.SelecionarPorDataEntrega(dataEntregaInicial, dataEntregaFinal);
         }
 
         public int ProximoNumeroControle()

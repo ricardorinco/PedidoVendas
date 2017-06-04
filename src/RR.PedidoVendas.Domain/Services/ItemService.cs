@@ -20,7 +20,7 @@ namespace RR.PedidoVendas.Domain.Services
             if (!item.IsValid())
                 return item;
 
-            item.ValidationResult = new ItemConsistenteValidation().Validate(item);
+            item.ValidationResult = new ItemAptoParaAdicionarValidation(itemRepository).Validate(item);
 
             if (!item.ValidationResult.IsValid)
                 return item;
