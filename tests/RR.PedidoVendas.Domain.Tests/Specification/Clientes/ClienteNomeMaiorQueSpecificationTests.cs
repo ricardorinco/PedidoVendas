@@ -12,9 +12,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { Nome = "João José de Souza" };
 
-            var specification = new ClienteNomeMaiorQueValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteNomeMaiorQueValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsTrue(specification);
+            Assert.IsTrue(especificacao);
         }
 
         [TestMethod]
@@ -22,9 +22,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { Nome = "Jo" };
 
-            var specification = new ClienteNomeMaiorQueValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteNomeMaiorQueValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
 
         [TestMethod]
@@ -32,9 +32,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { Nome = null };
 
-            var specification = new ClienteNomeMaiorQueValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteNomeMaiorQueValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
 
         [TestMethod]
@@ -42,9 +42,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { Nome = string.Empty };
 
-            var specification = new ClienteNomeMaiorQueValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteNomeMaiorQueValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
     }
 }

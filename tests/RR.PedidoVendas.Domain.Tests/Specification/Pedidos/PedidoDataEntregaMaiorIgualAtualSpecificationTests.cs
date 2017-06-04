@@ -13,9 +13,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Pedidos
         {
             var pedido = new Pedido { DataEntrega = DateTime.Now };
 
-            var specification = new PedidoDataEntregaMaiorIgualAtualSpecification().IsSatisfiedBy(pedido);
+            var especificacao = new PedidoDataEntregaMaiorIgualAtualSpecification().IsSatisfiedBy(pedido);
 
-            Assert.IsTrue(specification);
+            Assert.IsTrue(especificacao);
         }
 
         [TestMethod]
@@ -23,9 +23,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Pedidos
         {
             var pedido = new Pedido { DataEntrega = DateTime.Now.AddDays(2) };
 
-            var specification = new PedidoDataEntregaMaiorIgualAtualSpecification().IsSatisfiedBy(pedido);
+            var especificacao = new PedidoDataEntregaMaiorIgualAtualSpecification().IsSatisfiedBy(pedido);
 
-            Assert.IsTrue(specification);
+            Assert.IsTrue(especificacao);
         }
 
 
@@ -34,9 +34,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Pedidos
         {
             var pedido = new Pedido { DataEntrega = DateTime.Now.AddDays(-2) };
             
-            var specification = new PedidoDataEntregaMaiorIgualAtualSpecification().IsSatisfiedBy(pedido);
+            var especificacao = new PedidoDataEntregaMaiorIgualAtualSpecification().IsSatisfiedBy(pedido);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
     }
 }

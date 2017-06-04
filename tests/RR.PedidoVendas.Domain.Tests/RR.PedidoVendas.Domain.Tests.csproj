@@ -45,12 +45,19 @@
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MSTest.TestFramework.1.1.11\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Specification\Itens\ItemQuantidadeMenorQueSpecificationTests.cs" />
+    <Compile Include="Specification\Itens\ItemQuantidadeMaiorQueSpecificationTests.cs" />
     <Compile Include="Specification\Pedidos\PedidoDataEntregaMaiorIgualAtualSpecificationTests.cs" />
     <Compile Include="Validation\Clientes\ClienteValidationTests.cs" />
+    <Compile Include="Validation\Itens\ItemAptoParaAdicionarValidationTests.cs" />
+    <Compile Include="Validation\Itens\ItemValidationTests.cs" />
     <Compile Include="Validation\Pedidos\PedidoValidationTests.cs" />
     <Compile Include="Validation\Produtos\ProdutoValidationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

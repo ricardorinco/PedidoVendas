@@ -12,9 +12,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { CPF = "243.364.567-04" };
 
-            var specification = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsTrue(specification);
+            Assert.IsTrue(especificacao);
         }
 
         [TestMethod]
@@ -22,9 +22,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { CPF = "30695598325" };
 
-            var specification = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsTrue(specification);
+            Assert.IsTrue(especificacao);
         }
 
         [TestMethod]
@@ -32,9 +32,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { CPF = "125.364.567-04" };
 
-            var specification = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
 
         [TestMethod]
@@ -42,9 +42,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { CPF = "25632578950" };
 
-            var specification = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
 
         [TestMethod]
@@ -52,9 +52,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { CPF = "125.845.85" };
 
-            var specification = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
 
         [TestMethod]
@@ -62,9 +62,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { CPF = "XCV.ASD.ADS-DV" };
 
-            var specification = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
 
         [TestMethod]
@@ -72,9 +72,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { CPF = null };
 
-            var specification = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
 
         [TestMethod]
@@ -82,9 +82,9 @@ namespace RR.PedidoVendas.Domain.Tests.Specification.Clientes
         {
             var cliente = new Cliente { CPF = string.Empty };
 
-            var specification = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
+            var especificacao = new ClienteCPFValidoSpecification().IsSatisfiedBy(cliente);
 
-            Assert.IsFalse(specification);
+            Assert.IsFalse(especificacao);
         }
     }
 }
