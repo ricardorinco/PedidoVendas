@@ -1,8 +1,11 @@
-﻿# Pedido de Vendas
+# Pedido de Vendas
 
 Esta é uma simples aplicação de Pedido de Vendas utilizando como base algumas das ferramentas e metodologias mais utilizadas atualmente.
 
-#### Technology
+#### Arquitetura
+![](http://insidecode.com.br/apps/PedidoVendas/ddd_architecture.png)
+
+#### Tecnologia
 
  - ASP.NET MVC 5
  - Domain-Driven Design (DDD)
