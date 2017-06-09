@@ -1,3 +1,7 @@
+> **João 14:6:** "Respondeu Jesus: "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim.
+
+> **Note:** If you delete the file from **Google Drive** or from **Dropbox**, the document will no longer be synchronized with that location.
+
 # Pedido de Vendas
 
 Esta é uma simples aplicação de Pedido de Vendas utilizando como base algumas das ferramentas e metodologias mais utilizadas atualmente.
