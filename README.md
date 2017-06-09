@@ -1,4 +1,4 @@
-> **João 14:6:** "Respondeu Jesus: "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim.
+> **João 14:6:** "Respondeu Jesus: "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim."
 
 # Pedido de Vendas
 
